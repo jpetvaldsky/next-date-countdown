@@ -1,6 +1,6 @@
 // Nastav si začátek a konec období (formát YYYY-MM-DDTHH:MM)
-const startDate = new Date("2025-11-23T20:30:00");
-const endDate = new Date("2025-12-01T15:00:00"); // např. do neděle 12:00
+const startDate = new Date("2025-12-02T07:00:00");
+const endDate = new Date("2025-12-07T12:00:00");
 
 function updateCountdown() {
   const now = new Date();
