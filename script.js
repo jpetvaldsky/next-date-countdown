@@ -1,6 +1,6 @@
 // Nastav si začátek a konec období (formát YYYY-MM-DDTHH:MM)
 const startDate = new Date("2025-12-02T07:00:00");
-const endDate = new Date("2025-12-07T12:00:00");
+const endDate = new Date("2025-12-08T17:0:00");
 
 function updateCountdown() {
   const now = new Date();
@@ -28,7 +28,10 @@ function updateCountdown() {
   }
 
   let totalMinutes = days*24*60 + hours*60 + minutes;
+  totalMinutes = totalMinutes < 0 ? 0 : totalMinutes;
+  
   let totalSeconds = totalMinutes*60 + seconds;
+  totalSeconds = totalSeconds < 0 ? 0 : totalSeconds;
 
   text += `<br />${totalMinutes} minut<br />${totalSeconds} sekund`;
 
