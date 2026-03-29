@@ -12,10 +12,10 @@ function updateCountdown() {
   const elapsed = 1;
   let progress = 1;//Math.min(Math.max(elapsed / total, 0), 1); // clamp 0–1
 
-  let days = Math.floor(total / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  let minutes = Math.floor((total / (1000 * 60)) % 60);
-  let seconds = Math.floor((total / 1000) % 60);
+  let days = 0-Math.floor(total / (1000 * 60 * 60 * 24));
+  let hours = 0-Math.floor((total / (1000 * 60 * 60)) % 24);
+  let minutes = 0-Math.floor((total / (1000 * 60)) % 60);
+  let seconds = 0-Math.floor((total / 1000) % 60);
 
   // Pokud už uplynulo, ukážeme hotovo
   let text;
