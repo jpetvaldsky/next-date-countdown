@@ -35,7 +35,7 @@ function updateCountdown() {
   let totalSeconds = totalMinutes*60 + seconds;
   totalSeconds = totalSeconds < 0 ? 0 : totalSeconds;
 
-  text += `<br />${totalMinutes} minut<br />${totalSeconds} sekund`;
+  //text += `<br />${totalMinutes} minut<br />${totalSeconds} sekund`;
 
   document.getElementById("countdown").innerHTML = text;
   document.getElementById("bar").style.width = `${(progress * 100).toFixed(1)}%`;
