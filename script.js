@@ -1,19 +1,21 @@
 // Nastav si začátek a konec období (formát YYYY-MM-DDTHH:MM)
-const startDate = new Date("2026-01-06T18:00:00");
-const endDate = new Date("2026-01-09T17:00:00");
+const startDate = new Date("2026-11-06T00:00:00");
+const endDate = new Date();
 
 function updateCountdown() {
   const now = new Date();
 
   const total = endDate - startDate;
-  const elapsed = now - startDate;
-  const remaining = endDate - now;
-  let progress = Math.min(Math.max(elapsed / total, 0), 1); // clamp 0–1
+  //const elapsed = now - startDate;
+  //const remaining = endDate - now;
+  const remaining = 1;
+  const elapsed = 1;
+  let progress = 1;//Math.min(Math.max(elapsed / total, 0), 1); // clamp 0–1
 
-  let days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-  let minutes = Math.floor((remaining / (1000 * 60)) % 60);
-  let seconds = Math.floor((remaining / 1000) % 60);
+  let days = Math.floor(total / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  let minutes = Math.floor((total / (1000 * 60)) % 60);
+  let seconds = Math.floor((total / 1000) % 60);
 
   // Pokud už uplynulo, ukážeme hotovo
   let text;
@@ -24,7 +26,7 @@ function updateCountdown() {
     text = "⏳ Ještě nezačalo";
     progress = 0;
   } else {
-    text = `Zbývá ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    text = `Uz jsme spolu: ${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
   let totalMinutes = days*24*60 + hours*60 + minutes;
